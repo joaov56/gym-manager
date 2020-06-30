@@ -141,6 +141,7 @@ header {
 /* FORM */
 
 input {
+  margin-top: 10px;
   width: 100%;
   outline: none;
   color: #555;
@@ -149,6 +150,7 @@ input {
 }
 
 input[type="radio"] {
+  margin-top: 0;
   width: initial;
   margin-right: 4px;
 }

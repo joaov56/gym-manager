@@ -1,41 +1,22 @@
 {
   "instructors": [
     {
-      "name": "Jao",
-      "avatar_url": "http://google.com",
-      "birth": "2000-04-09",
-      "gender": "M",
-      "services": "Crosfit"
-    },
-    {
-      "name": "pinto",
-      "avatar_url": "http://google.com",
-      "birth": "2000-04-09",
-      "gender": "M",
-      "services": "Crosfit"
-    },
-    {
-      "name": "mec",
-      "avatar_url": "http://google.com",
-      "birth": "2000-04-09",
-      "gender": "M",
-      "services": "Crosfit"
-    },
-    {
-      "name": "df",
-      "avatar_url": "http://google.com",
-      "birth": "2000-04-09",
+      "id": 1,
+      "name": "joao",
+      "avatar_url": "https://source.unsplash.com/collection/8353395/500x500",
+      "birth": 1081468800000,
       "gender": "M",
       "services": "Crosfit",
-      "created_at": 1593490783682
+      "created_at": 1593556457304
     },
     {
-      "name": "lk",
+      "id": 2,
+      "name": "Sarah",
       "avatar_url": "http://google.com",
-      "birth": 955238400000,
-      "gender": "M",
-      "services": "Crosfit",
-      "created_at": 1593490906250
+      "birth": 1081468800000,
+      "gender": "F",
+      "services": "Crosfit, musculacao",
+      "created_at": 1593560766242
     }
   ]
 }

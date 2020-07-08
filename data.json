@@ -1,23 +1,26 @@
 {
-  "members": [],
+  "members": [
+    {
+      "name": "João Vitor Dias",
+      "email": "vitorjao56@gmail.com",
+      "avatar_url": "https://www.fabiomedina.com.br/wp-content/uploads/2018/10/professor-academia-fabio-medina.jpg",
+      "birth": 1081468800000,
+      "gender": "M",
+      "blood": "A+",
+      "weight": "90",
+      "height": "190",
+      "id": "1"
+    }
+  ],
   "instructors": [
     {
-      "id": "2",
-      "name": "Sarah",
+      "id": "1",
+      "name": "Luciano Hulk",
       "avatar_url": "https://portalbr.akamaized.net/brasil/uploads/2017/02/09145641/shutterstock_572464870.jpg",
-      "birth": 1081468800000,
-      "gender": "F",
-      "services": "Crosfit, musculacao",
-      "created_at": 1593560766242
-    },
-    {
-      "id": 2,
-      "name": "Luciano Rexona",
-      "avatar_url": "https://jornalsemanario.com.br/wp-content/uploads/Personal_Trainer.jpg",
-      "birth": 748742400000,
+      "birth": 1000166400000,
       "gender": "M",
-      "services": "Natação, Luta",
-      "created_at": 1593814591073
+      "services": "Crosfit",
+      "created_at": 1594170098905
     }
   ]
 }

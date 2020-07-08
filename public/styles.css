@@ -140,7 +140,8 @@ header {
 
 /* FORM */
 
-input {
+input,
+select {
   margin-top: 10px;
   width: 100%;
   outline: none;
@@ -178,8 +179,8 @@ button[type="submit"],
   text-decoration: none;
 }
 
-#form-delete button[type="submit"] {
-  margin-top: 8px;
+#delete {
+  margin-top: 25 px;
   background-color: lightcoral;
 }
 
@@ -232,7 +233,8 @@ tbody tr td:first-child span {
   border: 2px solid white;
 }
 
-tbody tr td:last-child a {
+tbody tr td:last-child a,
+.table-container > a {
   background-color: var(--primary-color);
   padding: 8px 16px;
   text-decoration: none;
@@ -240,6 +242,11 @@ tbody tr td:last-child a {
   color: white;
   font-size: 12px;
   border-radius: 4px;
+}
+
+.table-container > a {
+  display: inline-block;
+  margin-bottom: 15px;
 }
 
 .table-container thead th:last-child,

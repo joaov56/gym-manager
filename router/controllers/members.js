@@ -1,6 +1,6 @@
 const fs = require("fs");
-const data = require("../data.json");
-const { age, date } = require("../utils");
+const data = require("../../data.json");
+const { age, date } = require("../../utils");
 
 exports.index = function (req, res) {
   return res.render("members/index", { members: data.members });
@@ -17,21 +17,19 @@ exports.post = (req, res) => {
     if (req.body[key] == "") return res.send("Please, fill all fields");
   }
 
-  req.body.id = Number(data.members.length + 1);
+  birth = Date.parse(req.body.birth);
 
-  let { avatar_url, birth, name, gender, services } = req.body;
-  birth = Date.parse(birth);
-  const created_at = Date.now();
-  const id = Number(data.members.length + 1);
+  let id = 1;
+  const lastmember = data.members[data.members.length - 1];
+
+  if (lastmember) {
+    id = lastmember.id + 1;
+  }
 
   data.members.push({
+    ...req.body,
     id,
-    name,
-    avatar_url,
     birth,
-    gender,
-    services,
-    created_at,
   });
   fs.writeFile("data.json", JSON.stringify(data, null, 2), function (err) {
     if (err) {
@@ -55,6 +53,7 @@ exports.show = function (req, res) {
   const member = {
     ...foundMember,
     age: age(foundMember.birth),
+    birth: date(foundMember.birth).birthDay,
   };
 
   return res.render("./members/show", { member: member });
@@ -73,7 +72,7 @@ exports.edit = function (req, res) {
   const member = {
     ...foundMember,
 
-    birth: date(foundMember.birth),
+    birth: date(foundMember.birth).iso,
   };
 
   return res.render("members/edit", { member: member });

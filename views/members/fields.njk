@@ -1,43 +1,65 @@
-<form class="card" method="POST" action="/instructors">
+<div class="item">
+    <div>Membro</div>
+    <div>
+        <input type="text" name="name" id="" autocomplete="off" placeholder="Nome do Membro" value="{{member.name}}" ">
+    </div>
+</div>
 
-    <section class="avatar" style="background: url(https://source.unsplash.com/collection/8353395/500x500) no-repeat center center / cover"></section>
-    <section class="details">
+<div class="item">
+    <div>Email</div>
+    <div>
+        <input type="email" name="email" id="" autocomplete="off" value="{{member.email}}">
+    </div>
+</div>
+<div class="item">
+    <div>Avatar URL</div>
+    <div>
+        <input type="url" name="avatar_url" id="" placeholder="http://" value="{{member.avatar_url}}">
+    </div>
+</div>
+<div class="item">
+    <div>Data de nascimento</div>
+    <div>
+        <input type="date" name="birth" id="" value="{{member.birth}}">
+    </div>
+</div>
+<div class="item">
+    <div>Sexo</div>
+    <div>
+        <span><input type="radio" name="gender" id="" {% if member.gender=="M" %} checked="checked" {% endif %} value="M">Masculino</span>
+        <span><input type="radio" name="gender" id="" {% if member.gender=="F" %} checked="checked" {% endif %} value="F">Feminino</span>
 
-        <div class="item">
-            <div>Instrutor</div>
-            <div>
-                <input type="text" name="name" id="" autocomplete="off" value="{{instructor.name}}">
-            </div>
-        </div>
-        <div class="item">
-            <div>Avatar URL</div>
-            <div>
-                <input type="url" name="avatar_url" id="" placeholder="http://" value="{{instructor.avatar_url}}">
-            </div>
-        </div>
-        <div class="item">
-            <div>Data de nascimento</div>
-            <div>
-                <input type="date" name="birth" id="" value="{{instructor.birth}}">
-            </div>
-        </div>
-        <div class="item">
-            <div>Sexo</div>
-            <div>
-                <span><input type="radio" name="gender" id="" value="M" {% if instructor.gender=="M" %} checked="checked" {% endif %}>Masculino</span>
-                <span><input type="radio" name="gender" id="" value="F" {% if instructor.gender=="F" %} checked="checked" {% endif %}>Feminino</span>
+    </div>
+</div>
 
-            </div>
-        </div>
+<div class="item">
+    <div>Tipo sanguíneo</div>
+    <div>
+        <select name="blood">
+            <option value="A+" {% if member.blood=== "A"%} selected="selected" {% endif %}>A+</option>
+            <option value="A-" {% if member.blood=== "A-"%} selected="selected" {% endif %}>A-</option>
+            <option value="B+" {% if member.blood=== "B+"%} selected="selected" {% endif %}>B+</option>
+            <option value="B-" {% if member.blood=== "B-"%} selected="selected" {% endif %}>B-</option>
+            <option value="AB+" {% if member.blood=== "AB+"%} selected="selected" {% endif %}>AB+</option>
+            <option value="AB-" {% if member.blood=== "AB-"%} selected="selected" {% endif %}>AB-</option>
+            <option value="O+" {% if member.blood=== "O+"%} selected="selected" {% endif %}>O+</option>
+            <option value="O-" {% if member.blood=== "O-"%} selected="selected" {% endif %}>O-</option>
+        </select>
+    </div>
+</div>
 
-        <div class="item">
-            <div>Áre de atuação</div>
-            <div>
-                <input type="text" name="services" id="" placeholder="Separe os serviços prestados por vírgula" value="{{instructor.services}}">
-            </div>
-        </div>
-        <input type="hidden" name="id" value="{{instructor.id}}">
+<div class="item">
+    <div>Peso</div>
+    <div>
+        <input type="number" name="weight" id="" autocomplete="off" value="{{member.weight}}">
+    </div>
+</div>
 
-        <button type="submit">Salvar</button>
-    </section>
-</form>
+<div class="item">
+    <div>Altura</div>
+    <div>
+        <input type="number" name="height" id="" autocomplete="off" value="{{member.height}}">
+    </div>
+</div>
+
+<button type="submit">Salvar</button>

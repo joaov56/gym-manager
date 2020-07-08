@@ -1,19 +1,10 @@
-const modalOverlay = document.querySelector(".modal-overlay");
-const cards = document.querySelectorAll(".card");
-const close = document.querySelector(".close-modal");
-const cursos = document.querySelectorAll(".card_curso");
+const currentPage = location.pathname;
+const menuItems = document.querySelectorAll(".links a");
 
-for (let curso of cursos) {
-  curso.addEventListener("click", function () {
-    const id = curso.getAttribute("id");
-    window.location.href = `/courses/${id}`;
-  });
-}
-for (let card of cards) {
-  card.addEventListener("click", function () {
-    const videoid = card.getAttribute("id");
-    window.location.href = `/video?id=${videoid}`;
-  });
-}
+for (item of menuItems) {
+  console.log(item.getAttribute("href"));
 
-const iframe = modalOverlay.querySelector("iframe");
+  if (currentPage.includes(item.getAttribute("href"))) {
+    item.classList.add("active");
+  }
+}
